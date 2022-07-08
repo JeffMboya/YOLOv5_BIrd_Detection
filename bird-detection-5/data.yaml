@@ -1,0 +1,5 @@
+names:
+- bird
+nc: 1
+train: bird-detection-5/train/images
+val: bird-detection-5/valid/images

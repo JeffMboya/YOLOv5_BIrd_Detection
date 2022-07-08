@@ -23,14 +23,13 @@ from IPython.display import Image #this is to render predictions
 from tqdm import tqdm
 import IProgress
 from ipywidgets import IntProgress
-
 torch.cuda.get_arch_list() 
 print('All set. Using PyTorch version %s with %s' % (torch.__version__, torch.cuda.get_device_properties(0) if torch.cuda.is_available() else 'CPU'))
 
+#Run the following lines of code to download the bird dataset from roboflow. 
 !pip install roboflow
-
 from roboflow import Roboflow
-rf = Roboflow(api_key="Y8YgDCItd1JJaZhHNt8y")
+rf = Roboflow(api_key="Insert your API key")
 project = rf.workspace("ryu-myoungwoo").project("bird-detection-zqcdr")
 dataset = project.version(5).download("yolov5")
 
